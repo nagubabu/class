@@ -8,11 +8,30 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-list>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" [(ngModel)] = "username"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button block ion-button (click)="setUsername()">Sign In</button>
+  </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div padding>
+    <button block ion-button (click)="getMyIP()">Get IP Address</button>
+  </div>
+
+  <div padding>
+    <button block ion-button (click)="setUser()">Set User Name</button>
+  </div>
+
+  <div padding>
+    <button block ion-button (click)="showToast('Welcome to Guest')">Show Toast Message</button>
+  </div>
+
+  <div>{{myIP?.ip}}</div>
 </ion-content>
